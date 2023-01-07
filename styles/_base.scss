@@ -1,0 +1,210 @@
+/*--------------------------------------------------------------
+Font face
+--------------------------------------------------------------*/
+
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../assets/fonts/Poppins-Regular.woff2') format('woff2'), url('../assets/fonts/Poppins-Regular.ttf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../assets/fonts/Poppins-SemiBold.woff2') format('woff2'), url('../assets/fonts/Poppins-SemiBold.ttf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../assets/fonts/Poppins-Bold.woff2') format('woff2'), url('../assets/fonts/Poppins-Bold.ttf') format('opentype');
+}
+
+/*--------------------------------------------------------------
+Variables
+--------------------------------------------------------------*/
+
+html {
+    --black: #0F0F0F;
+    --white: #FFFFFF;
+    --white-2: #f3f5f7;
+    --global-color: #00ac1f;
+
+    --text_color: #0F0F0F;
+    --reverse_text_color: #FFFFFF;
+
+    --font: 'Poppins', sans-serif;
+    --regular: 400;
+	--semibold: 600;
+	--bold: 700;
+
+    --shadow: 0px 0px 30px 0px rgb(0 0 0 / 4%);
+    --mask: #00000041;
+    --radius_big: 50px;
+    --radius: 30px;
+    --radius_small: 15px
+}
+
+
+/*--------------------------------------------------------------
+Global
+--------------------------------------------------------------*/
+
+html {
+    font-family: var(--font);
+    background-color: var(--white);
+    color: var(--black);
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.wrapper {
+    max-width: 1375px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+
+/*--------------------------------------------------------------
+Animations
+--------------------------------------------------------------*/
+
+
+
+
+/*--------------------------------------------------------------
+Colonnes
+--------------------------------------------------------------*/
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col1 {
+    flex: 0 0 calc(100% / 6);
+    max-width: calc(100% / 6);
+}
+
+.col2 {
+    flex: 0 0 calc(100% / 6 * 2);
+    max-width: calc(100% / 6 * 2);
+}
+
+.col3 {
+    flex: 0 0 calc(100% / 6 * 3);
+    max-width: calc(100% / 6 * 3);
+}
+
+.col4 {
+    flex: 0 0 calc(100% / 6 * 4);
+    max-width: calc(100% / 6 * 4);
+}
+
+.col5 {
+    flex: 0 0 calc(100% / 6 * 5);
+    max-width: calc(100% / 6 * 5);
+}
+
+.col6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+Modèles
+--------------------------------------------------------------*/
+
+/*-----Bouton-----*/
+
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: var(--semibold);
+    padding: 15px 30px;
+    transition: .2s;
+    cursor: pointer;
+    display: inline-block;
+    &_primary {
+        background-color: var(--purple);
+        color: var(--white);
+        &:hover {
+            box-shadow: var(--shadow);
+            transform: translate(0, -2px);
+        }
+    }
+    &_secondary {
+        border: 3px solid var(--orange);
+        color: var(--orange);
+        font-weight: var(--bold);
+        &:hover {
+            background-color: var(--orange);
+            color: var(--white);
+        }
+    }
+}
+
+/*-----Formulaire-----*/
+
+form {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    input:not([type="submit"]), textarea {
+        background-color: var(--purple_light);
+        border-radius: var(--radius_small);
+        border: 1px solid transparent;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 15px 0;
+        padding: 15px 20px;
+        &:focus {
+            border-color: var(--purple);
+            outline: 0;
+        }
+        &.mid {
+            width: 47%;
+        }
+    }
+    input[type="submit"] {
+        border: 0;
+        margin-top: 20px;
+    }
+}

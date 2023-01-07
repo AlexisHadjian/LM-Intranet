@@ -1,0 +1,69 @@
+@import 'normalize';
+@import 'base';
+
+/*--------------------------------------------------------------
+Header
+--------------------------------------------------------------*/
+
+header {
+    
+}
+
+/*--------------------------------------------------------------
+Page
+--------------------------------------------------------------*/
+
+aside {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    z-index: 1;
+    width: 350px;
+    ul {
+        li {
+            display: flex;
+            align-items: center;
+            padding: 15px 25px;
+            cursor: pointer;
+            &.active {
+                border-right: 3px solid var(--global-color);
+                svg {
+                    color: var(--global-color);
+                }
+                span {
+                    font-weight: var(--bold);
+                }
+            }
+            span {
+                display: block;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+main {
+    background-color: var(--white-2);
+    padding: 50px;
+    width: 100%;
+    #tabs-content {
+        .tab {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+
+footer {
+    
+}
