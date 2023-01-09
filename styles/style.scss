@@ -54,6 +54,7 @@ aside {
 main {
     background-color: var(--white-2);
     width: 100%;
+    overflow: hidden;
     header {
         background-color: var(--white);
         width: 100%;
@@ -137,29 +138,186 @@ main {
                 }
             }
             &__actuality {
+                padding: 50px 0;
+                align-items: unset;
                 &__blog {
                     background-color: var(--white-2);
                     border-radius: var(--radius_small);
+                    position: relative;
+                    overflow: hidden;
+                    .slick-list {
+                        height: 100%;
+                        .slick-track {
+                            height: 100%;
+                        }
+                    }
+                    .slick-arrow {
+                        all: unset;
+                        font-size: 0;
+                        background-image: url(../assets/img/arrow.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        position: absolute;
+                        cursor: pointer;
+                        width: 40px;
+                        height: 40px;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                        z-index: 1;
+                        &.slick-prev {
+                            left: 10px;
+                        }
+                        &.slick-next {
+                            right: 10px;
+                            transform: translate(0, -50%) rotate(180deg);
+                        }
+                    }
+                    .slick-dots {
+                        position: absolute;
+                        bottom: 15px;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 20px;
+                        li {
+                            line-height: 0;
+                            button {
+                                all: unset;
+                                font-size: 0;
+                                width: 30px;
+                                height: 5px;
+                                border-radius: var(--radius_small);
+                                background-color: var(--white);
+                                cursor: pointer;
+                            }
+                            &.slick-active {
+                                button {
+                                    background-color: var(--global-color);
+                                }
+                            }
+                        }
+                    }
                     .slider-image {
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: cover;
                         display: block;
-                        height: 400px;
-                        width: 100%;
+                        height: 100%;
                     }
                 }
                 &__calendar {
-                    background-color: var(--white);
-                    border-radius: var(--radius_small);
+                    display: flex;
+                    flex-flow: column;
+                    gap: 20px;
+                    padding-left: 30px;
+                    > div {
+                        background-color: var(--white);
+                        border-radius: var(--radius_small);
+                    }
+                    &__top {
+                        header {
+                            display: flex;
+                            align-items: center;
+                            padding: 25px 30px 10px;
+                            justify-content: space-between;
+                            .icons {
+                                display: flex;
+                                span {
+                                    height: 38px;
+                                    width: 38px;
+                                    margin: 0 1px;
+                                    cursor: pointer;
+                                    color: #878787;
+                                    text-align: center;
+                                    line-height: 38px;
+                                    font-size: 1.9rem;
+                                    user-select: none;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    &:last-child {
+                                        margin-right: -10px;
+                                    }
+                                    &:hover {
+                                        background: var(--white-2);
+                                    }
+                                }
+                            }
+                            .current-date {
+                                font-size: 1.45rem;
+                                font-weight: 500;
+                            }
+                        }
+                        .calendar {
+                            padding: 20px;
+                            ul {
+                                display: flex;
+                                flex-wrap: wrap;
+                                list-style: none;
+                                text-align: center;
+                            }
+                            li {
+                                color: #333;
+                                width: calc(100% / 7);
+                                font-size: 1.07rem;
+                            }
+                            .weeks li {
+                                font-weight: 500;
+                                cursor: default;
+                            }
+                            .days {
+                                margin-bottom: 20px;
+                                li {
+                                    z-index: 1;
+                                    cursor: pointer;
+                                    position: relative;
+                                    margin-top: 30px;
+                                    &:nth-child(20), &:nth-child(25) {
+                                        &::after {
+                                            content: "";
+                                            width: 7px;
+                                            height: 7px;
+                                            border-radius: 50%;
+                                            position: absolute;
+                                            background-color: var(--global-color);
+
+                                        }
+                                    }
+                                    &:not(.active):hover::before {
+                                        background: #f2f2f2;
+                                    }
+                                    &.inactive {
+                                        color: #aaa;
+                                    }
+                                    &.active {
+                                        color: #fff;
+                                        &::before {
+                                            background: var(--global-color);
+                                        }
+                                    }
+                                    &::before {
+                                        position: absolute;
+                                        content: "";
+                                        left: 50%;
+                                        top: 50%;
+                                        height: 40px;
+                                        width: 40px;
+                                        z-index: -1;
+                                        border-radius: 50%;
+                                        transform: translate(-50%, -50%);
+                                    }
+                                }
+                            } 
+                        }
+                    }
                 }
             }
         }
     }
 }
-
-
-
 
 
 
