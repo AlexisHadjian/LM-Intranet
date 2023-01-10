@@ -156,29 +156,19 @@ Modèles
 /*-----Bouton-----*/
 
 .btn {
-    text-transform: uppercase;
     text-decoration: none;
-    border-radius: var(--radius);
+    border-radius: var(--radius_small);
     font-weight: var(--semibold);
-    padding: 15px 30px;
+    padding: 15px 20px;
+    font-size: 12px;
     transition: .2s;
     cursor: pointer;
     display: inline-block;
     &_primary {
-        background-color: var(--purple);
+        background-color: var(--global-color);
         color: var(--white);
         &:hover {
             box-shadow: var(--shadow);
-            transform: translate(0, -2px);
-        }
-    }
-    &_secondary {
-        border: 3px solid var(--orange);
-        color: var(--orange);
-        font-weight: var(--bold);
-        &:hover {
-            background-color: var(--orange);
-            color: var(--white);
         }
     }
 }

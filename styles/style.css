@@ -346,31 +346,21 @@ Modèles
 --------------------------------------------------------------*/
 /*-----Bouton-----*/
 .btn {
-  text-transform: uppercase;
   text-decoration: none;
-  border-radius: var(--radius);
+  border-radius: var(--radius_small);
   font-weight: var(--semibold);
-  padding: 15px 30px;
+  padding: 15px 20px;
+  font-size: 12px;
   transition: 0.2s;
   cursor: pointer;
   display: inline-block;
 }
 .btn_primary {
-  background-color: var(--purple);
+  background-color: var(--global-color);
   color: var(--white);
 }
 .btn_primary:hover {
   box-shadow: var(--shadow);
-  transform: translate(0, -2px);
-}
-.btn_secondary {
-  border: 3px solid var(--orange);
-  color: var(--orange);
-  font-weight: var(--bold);
-}
-.btn_secondary:hover {
-  background-color: var(--orange);
-  color: var(--white);
 }
 
 /*-----Formulaire-----*/
@@ -436,6 +426,44 @@ aside ul li.active svg {
 }
 aside ul li.active span {
   font-weight: var(--bold);
+}
+aside ul li#tabs__mailbox {
+  flex-flow: column;
+  align-items: unset;
+}
+aside ul li#tabs__mailbox > div {
+  display: flex;
+  align-items: center;
+}
+aside ul li#tabs__mailbox #tabs__mailbox__menu {
+  display: none;
+  margin-top: 20px;
+}
+aside ul li#tabs__mailbox #tabs__mailbox__menu.active {
+  display: block;
+}
+aside ul li#tabs__mailbox #tabs__mailbox__menu a.btn {
+  padding-left: 40px;
+  background-image: url(../assets/img/pencil-plus.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 24px;
+}
+aside ul li#tabs__mailbox #tabs__mailbox__menu > div {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+}
+aside ul li#tabs__mailbox #tabs__mailbox__menu > div svg {
+  color: var(--black);
+}
+aside ul li#tabs__mailbox #tabs__mailbox__menu > div span {
+  font-weight: var(--regular);
+}
+aside ul li#tabs__mailbox #tabs__mailbox__menu span {
+  font-size: 14px;
+  padding-left: 0;
+  padding-right: 0;
 }
 aside ul li span {
   display: block;
@@ -707,7 +735,78 @@ main #content-tabs__home__actuality__calendar__top .calendar .days li::before {
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
-
+main #content-tabs__mailbox {
+  display: flex;
+}
+main #content-tabs__mailbox.tab.active {
+  display: flex;
+}
+main #content-tabs__mailbox__list .mail {
+  background-color: var(--white);
+  border-radius: var(--radius_small);
+  padding: 30px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+main #content-tabs__mailbox__list .mail.active {
+  border-color: var(--global-color);
+}
+main #content-tabs__mailbox__list .mail__top__img {
+  background-image: url(../assets/img/profil-picture.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+main #content-tabs__mailbox__list .mail__top__name {
+  margin: 0;
+}
+main #content-tabs__mailbox__list .mail__top__date {
+  color: #AAAAAA;
+  font-size: 14px;
+}
+main #content-tabs__mailbox__list .mail__bottom p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+main #content-tabs__mailbox__content {
+  background-color: var(--white);
+  border-radius: var(--radius_small);
+  padding: 40px;
+}
+main #content-tabs__mailbox__content__top {
+  margin-bottom: 40px;
+}
+main #content-tabs__mailbox__content__top__img {
+  background-image: url(../assets/img/profil-picture.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+main #content-tabs__mailbox__content__top__name {
+  font-size: 30px;
+  margin: 0;
+}
+main #content-tabs__mailbox__content__top__tag {
+  background-color: var(--global-color);
+  border-radius: var(--radius);
+  color: var(--white);
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-size: 12px;
+}
+main #content-tabs__mailbox__content__top__date {
+  color: #AAAAAA;
+}
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/

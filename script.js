@@ -10,7 +10,24 @@ jQuery(document).ready(function($){
 		var id = $(this).attr('id');
 
 		$('#tabs li, #content-tabs .tab').removeClass('active');//Remove all tab class
+		$('#tabs #tabs__mailbox__menu').removeClass('active');//Remove all tab class
 		$('#tabs #'+id+', #content-'+id+'').addClass('active');//Add current tab class 
+	});
+
+    //Messageire tab display
+    $('#tabs #tabs__mailbox').click(function(e) {
+		e.preventDefault();
+
+		$('#tabs #tabs__mailbox__menu').addClass('active');//Add current tab class 
+	});
+
+    //Mail active
+    $('#content-tabs__mailbox__list .mail').click(function(e) {
+		e.preventDefault();
+
+
+		$('#content-tabs__mailbox__list .mail').removeClass('active');//Add current mail class
+		$(this).addClass('active');//Add current mail class
 	});
 
 

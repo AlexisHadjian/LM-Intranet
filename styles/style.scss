@@ -43,6 +43,44 @@ aside {
                     font-weight: var(--bold);
                 }
             }
+            &#tabs__mailbox {
+                flex-flow: column;
+                align-items: unset;
+                > div {
+                    display: flex;
+                    align-items: center;
+                }
+                #tabs__mailbox__menu {
+                    display: none;
+                    margin-top: 20px;
+                    &.active {
+                        display: block;
+                    }
+                    a.btn {
+                        padding-left: 40px;
+                        background-image: url(../assets/img/pencil-plus.svg);
+                        background-repeat: no-repeat;
+                        background-position: 10px center;
+                        background-size: 24px;
+                    }
+                    > div {
+                        display: flex;
+                        align-items: center;
+                        padding: 10px 10px;
+                        svg {
+                            color: var(--black);
+                        }
+                        span {
+                            font-weight: var(--regular);
+                        }
+                    }
+                    span {
+                        font-size: 14px;
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+            }
             span {
                 display: block;
                 margin-left: 15px;
@@ -315,6 +353,93 @@ main {
                             } 
                         }
                     }
+                }
+            }
+        }
+        &__mailbox {
+            display: flex;
+            &.tab {
+                &.active {
+                    display: flex;
+                }
+            }
+            &__list {
+                .mail {
+                    background-color: var(--white);
+                    border-radius: var(--radius_small);
+                    padding: 30px;
+                    margin-bottom: 20px;
+                    margin-right: 50px;
+                    border: 1px solid transparent;
+                    cursor: pointer;
+                    &.active {
+                        border-color: var(--global-color);
+                    }
+                    &__top {
+                        &__img {
+                            background-image: url(../assets/img/profil-picture.jpg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50%;
+                            margin-right: 10px;
+                            
+                        }
+                        &__name {
+                            margin: 0;
+                        }
+                        &__date {
+                            color: #AAAAAA;
+                            font-size: 14px;
+                        }
+                    }
+                    &__bottom {
+                        p {
+                            font-size: 14px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            &__content {
+                background-color: var(--white);
+                border-radius: var(--radius_small);
+                padding: 40px;
+                &__top {
+                    margin-bottom: 40px;
+                    &__img {
+                        background-image: url(../assets/img/profil-picture.jpg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        margin-right: 30px;
+                    }
+                    &__name {
+                        font-size: 30px;
+                        margin: 0;
+                    }
+                    &__tag {
+                        background-color: var(--global-color);
+                        border-radius: var(--radius);
+                        color: var(--white);
+                        padding: 5px 10px;
+                        margin-right: 10px;
+                        font-size: 12px;
+                    }
+                    &__date {
+                        color: #AAAAAA;
+                    }
+                }
+                &__mid {
+
+                }
+                &__bottom {
+
                 }
             }
         }
