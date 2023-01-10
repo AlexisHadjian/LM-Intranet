@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
     Tabs switch
     --------------------------------------------------------------*/
 
-    $('#tabs li').click(function(e) {
+    $('#tabs > li').click(function(e) {
 		e.preventDefault();
 
 		var id = $(this).attr('id');
@@ -14,7 +14,7 @@ jQuery(document).ready(function($){
 		$('#tabs #'+id+', #content-'+id+'').addClass('active');//Add current tab class 
 	});
 
-    //Messageire tab display
+    //Messagerie tab display
     $('#tabs #tabs__mailbox').click(function(e) {
 		e.preventDefault();
 
@@ -30,6 +30,21 @@ jQuery(document).ready(function($){
 		$(this).addClass('active');//Add current mail class
 	});
 
+    //New message
+    $('#tabs__mailbox__menu a').click(function(e) {
+        e.preventDefault();
+
+		$('#content-tabs__mailbox__list, #content-tabs__mailbox__content').css('display', 'none');//Remove all tab class
+		$('#content-tabs__mailbox__new-message').addClass('active');
+	});
+
+    //Close new message
+    $('#content-tabs__mailbox__new-message .cross').click(function(e) {
+        e.preventDefault();
+
+		$('#content-tabs__mailbox__list, #content-tabs__mailbox__content').css('display', 'unset');
+		$('#content-tabs__mailbox__new-message').removeClass('active');
+	});
 
 	/*--------------------------------------------------------------
     Home blog slider

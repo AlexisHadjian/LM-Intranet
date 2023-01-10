@@ -442,6 +442,41 @@ main {
 
                 }
             }
+            &__new-message {
+                display: none;
+                background-color: var(--white);
+                border-radius: var(--radius_small);
+                padding: 40px;
+                &.active {
+                    display: block;
+                }
+                &__top {
+                    margin-bottom: 20px;
+                    span {
+                        font-weight: var(--semibold);
+                    }
+                    .cross {
+                        cursor: pointer;
+                        stroke: var(--picto_light_color);
+                    }
+                }
+                &__mid {
+                    form {   
+                        input:not([type="submit"]), textarea {
+                            border-radius: 0;
+                            padding: 0;
+                            border: 0;
+                            border-bottom: 1px solid #AAAAAA;
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                        input[type="submit"] {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

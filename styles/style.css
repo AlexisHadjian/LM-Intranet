@@ -807,6 +807,38 @@ main #content-tabs__mailbox__content__top__tag {
 main #content-tabs__mailbox__content__top__date {
   color: #AAAAAA;
 }
+main #content-tabs__mailbox__new-message {
+  display: none;
+  background-color: var(--white);
+  border-radius: var(--radius_small);
+  padding: 40px;
+}
+main #content-tabs__mailbox__new-message.active {
+  display: block;
+}
+main #content-tabs__mailbox__new-message__top {
+  margin-bottom: 20px;
+}
+main #content-tabs__mailbox__new-message__top span {
+  font-weight: var(--semibold);
+}
+main #content-tabs__mailbox__new-message__top .cross {
+  cursor: pointer;
+  stroke: var(--picto_light_color);
+}
+main #content-tabs__mailbox__new-message__mid form input:not([type=submit]), main #content-tabs__mailbox__new-message__mid form textarea {
+  border-radius: 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid #AAAAAA;
+}
+main #content-tabs__mailbox__new-message__mid form input:not([type=submit]):focus, main #content-tabs__mailbox__new-message__mid form textarea:focus {
+  outline: none;
+}
+main #content-tabs__mailbox__new-message__mid form input[type=submit] {
+  font-size: 15px;
+}
+
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
