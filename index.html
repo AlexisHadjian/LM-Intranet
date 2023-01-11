@@ -56,27 +56,26 @@
                     
                 </div>
             </li>
-            <li id="tabs__documents">
+            <li id="tabs__planning">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
-                    <path d="M12 17v-6"></path>
-                    <path d="M9.5 14.5l2.5 2.5l2.5 -2.5"></path>
+                    <rect x="4" y="5" width="16" height="16" rx="2"></rect>
+                    <line x1="16" y1="3" x2="16" y2="7"></line>
+                    <line x1="8" y1="3" x2="8" y2="7"></line>
+                    <line x1="4" y1="11" x2="20" y2="11"></line>
+                    <line x1="10" y1="16" x2="14" y2="16"></line>
                 </svg>
-                <span>Mes documents</span>
+                <span>Planning</span>
             </li>
-            <li id="tabs__assistance">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <li id="tabs__committee">
+                <svg xmlns="http://www.w3.org/2000/svg"  width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <circle cx="12" cy="12" r="4"></circle>
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <line x1="15" y1="15" x2="18.35" y2="18.35"></line>
-                    <line x1="9" y1="15" x2="5.65" y2="18.35"></line>
-                    <line x1="5.65" y1="5.65" x2="9" y2="9"></line>
-                    <line x1="18.35" y1="5.65" x2="15" y2="9"></line>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
                 </svg>
-                <span>Assistance</span>
+                <span>Comité d'entreprise</span>
             </li>
         </ul>
     </aside>
@@ -122,9 +121,24 @@
                 </div>
                 <div id="content-tabs__home__actuality" class="row">
                     <div id="content-tabs__home__actuality__blog" class="col4">
-                        <div class="slider-image" style="background-image: url('assets/img/blog/blog-image1.jpg');"></div>
-                        <div class="slider-image" style="background-image: url('assets/img/blog/blog-image2.jpg');"></div>
-                        <div class="slider-image" style="background-image: url('assets/img/blog/blog-image3.jpg');"></div>
+                        <div class="slider-image" style="background-image: url('assets/img/blog/blog-image1.jpg');">
+                            <div class="slider-image__content">
+                                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus fugiat nobis aperiam praesentium expedita. Explicabo, ad ullam? Laudantium, alias! Omnis nihil veniam, voluptatem hic a esse distinctio culpa sit nulla!</p>
+                            </div>
+                        </div>
+                        <div class="slider-image" style="background-image: url('assets/img/blog/blog-image2.jpg');">
+                            <div class="slider-image__content">
+                                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus fugiat nobis aperiam praesentium expedita. Explicabo, ad ullam? Laudantium, alias! Omnis nihil veniam, voluptatem hic a esse distinctio culpa sit nulla!</p>
+                            </div>
+                        </div>
+                        <div class="slider-image" style="background-image: url('assets/img/blog/blog-image3.jpg');">
+                            <div class="slider-image__content">
+                                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus fugiat nobis aperiam praesentium expedita. Explicabo, ad ullam? Laudantium, alias! Omnis nihil veniam, voluptatem hic a esse distinctio culpa sit nulla!</p>
+                            </div>
+                        </div>
                     </div>
                     <div id="content-tabs__home__actuality__calendar" class="col2">
                         <div id="content-tabs__home__actuality__calendar__top">
@@ -237,11 +251,85 @@
                     </div>
                 </div>
             </div>
-            <div id="content-tabs__documents" class="tab">
-                <h1>Onglet documents</h1>
+            <div id="content-tabs__planning" class="tab">
+                <div id="content-tabs__planning__image"></div>
             </div>
-            <div id="content-tabs__assistance" class="tab">
-                <h1>Onglet assistance</h1>
+            <div id="content-tabs__committee" class="tab">
+                <div id="content-tabs__committee" class="row">
+                    <div id="content-tabs__committee__event" class="col4">
+                        <div id="content-tabs__committee__event__image">
+                            <span>30min</span>
+                        </div>
+                        <div id="content-tabs__committee__event__info">
+                            <div class="row">
+                                <h3>Évènement entreprise</h3>
+                                <span>12h-14h du 26/01/23 au 29/01/23</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti est sed rem hic nulla similique voluptatibus sunt sit dolore facere.</p>
+                        </div>
+                    </div>
+                    <div id="content-tabs__committee__offer" class="col2">
+                        <div id="content-tabs__committee__offer__top">
+                            <h3>Offre à durée limitée</h3>
+                            <span>10/01/23 - 10/02/23</span>
+                        </div>
+                        <div id="content-tabs__committee__offer__mid">
+                            <p>Jusqu'à <span>-40%</span> sur une sélection de produits Apple</p>
+                        </div>
+                        <div id="content-tabs__committee__offer__bottom">
+                            <a class="btn btn_primary" href="#">En profiter maintenant</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="content-tabs__committee__coupons">
+                    <div id="content-tabs__committee__coupons__single">
+                        <div id="content-tabs__committee__coupons__single__picto">
+                            <svg width="46" height="38" viewBox="0 0 46 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M38.43 0.719987C33.64 -1.02001 28.68 0.509986 27.36 4.13999C27.02 5.07999 26.96 6.07999 27.14 7.05999C25.54 6.51999 23.83 6.20999 22.05 6.20999C20.63 6.20999 19.26 6.40999 17.95 6.75999C18.07 5.86999 17.99 4.97999 17.68 4.12999C16.36 0.509987 11.4 -1.02001 6.61 0.719987C1.82 2.45999 -0.999998 6.81999 0.330002 10.45C1.34 13.23 4.48 14.77 8.05 14.56C6.84 16.8 6.15 19.37 6.15 22.1C6.15 30.88 13.27 37.99 22.04 37.99C30.81 37.99 37.93 30.87 37.93 22.1C37.93 19.33 37.22 16.72 35.97 14.45C39.94 15.04 43.6 13.49 44.71 10.45C46.03 6.81999 43.22 2.45999 38.43 0.719987Z" fill="white"/>
+                            </svg>                                
+                        </div>
+                        <div id="content-tabs__committee__coupons__single__text">
+                            <h3>Entrée Disney</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                        <div id="content-tabs__committee__coupons__single__coupon" style="background-image: url('assets/img/coupons/coupon-disney.png');"></div>
+                    </div>
+                    <div id="content-tabs__committee__coupons__single">
+                        <div id="content-tabs__committee__coupons__single__picto">
+                            <svg width="36" height="38" viewBox="0 0 36 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_58_134)">
+                                <path d="M20.3999 38C20.3999 37.84 20.4199 37.68 20.4199 37.52C20.4199 31.18 20.4199 24.83 20.4199 18.49C20.4199 18.33 20.4199 18.17 20.4199 17.97C20.5999 17.97 20.7299 17.97 20.8599 17.97C24.2999 17.97 27.7299 17.97 31.1699 17.97C32.1499 17.97 32.6499 18.47 32.6499 19.45C32.6499 24.15 32.6499 28.85 32.6499 33.55C32.6499 35.85 31.3399 37.45 29.0899 37.94C29.0599 37.94 29.0299 37.98 28.9999 38H20.3899H20.3999Z" fill="white"/>
+                                <path d="M6.30002 38C5.58002 37.81 4.89002 37.59 4.30002 37.11C3.31002 36.31 2.71002 35.28 2.67002 34C2.63002 32.68 2.65002 31.35 2.65002 30.03C2.65002 26.53 2.65002 23.03 2.65002 19.53C2.65002 18.45 3.12002 17.98 4.21002 17.98C7.57002 17.98 10.94 17.98 14.3 17.98C14.44 17.98 14.59 17.98 14.76 17.98C14.76 18.14 14.78 18.26 14.78 18.38C14.78 24.81 14.78 31.24 14.78 37.67C14.78 37.78 14.77 37.89 14.76 38H6.30002Z" fill="white"/>
+                                <path d="M17.78 3.94C18.91 3.03 19.92 2.14 21.02 1.36C22.17 0.550004 23.47 0.0500038 24.91 3.8424e-06C27.32 -0.0799962 28.96 1.36 29.68 3.25C30.03 4.17 30.19 5.13 30.19 6.11C30.19 6.86 29.73 7.37 28.99 7.46C28.88 7.47 28.77 7.47 28.66 7.47C21.35 7.47 14.04 7.47 6.74001 7.47C5.69001 7.47 5.12001 6.93 5.22001 5.88C5.31001 5.04 5.44001 4.18 5.73001 3.39C6.57001 1.11 8.57001 -0.149996 10.96 0.0200038C12.54 0.140004 13.95 0.770004 15.21 1.69C16 2.26 16.72 2.93 17.46 3.56C17.61 3.69 17.71 3.86 17.78 3.94ZM15.07 4.87C13.99 3.95 12.93 3.17 11.65 2.78C11.25 2.66 10.8 2.6 10.38 2.6C9.21001 2.62 8.09001 3.74 8.07001 4.87H15.07ZM20.76 4.85H27.77C27.58 3.36 26.24 2.36 24.81 2.62C23.24 2.9 22.03 3.83 20.77 4.85H20.76Z" fill="white"/>
+                                <path d="M20.4499 16.33V9.14001C20.5899 9.14001 20.7199 9.14001 20.8499 9.14001C24.1999 9.14001 27.5499 9.14001 30.8999 9.14001C33.1999 9.14001 34.9299 10.56 35.2699 12.84C35.3899 13.64 35.3399 14.47 35.2899 15.28C35.2599 15.83 34.6899 16.28 34.0999 16.32C33.9799 16.32 33.8499 16.32 33.7299 16.32C29.4499 16.32 25.1799 16.32 20.8999 16.32C20.7599 16.32 20.6099 16.32 20.4399 16.32L20.4499 16.33Z" fill="white"/>
+                                <path d="M14.7601 16.33H14.3501C10.0701 16.33 5.8001 16.33 1.5201 16.33C0.4701 16.33 -0.0199004 15.85 9.95776e-05 14.79C0.0200996 13.95 -0.0199004 13.1 0.1601 12.29C0.5701 10.46 2.2901 9.14995 4.1601 9.14995C7.6101 9.13995 11.0601 9.14995 14.5001 9.14995C14.5701 9.14995 14.6401 9.14995 14.7501 9.14995V16.34L14.7601 16.33Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_58_134">
+                                <rect width="35.35" height="38" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>                               
+                        </div>
+                        <div id="content-tabs__committee__coupons__single__text">
+                            <h3>Chèque cadhoc</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                        <div id="content-tabs__committee__coupons__single__coupon" style="background-image: url('assets/img/coupons/coupon-cadhoc.png');"></div>
+                    </div>
+                    <div id="content-tabs__committee__coupons__single">
+                        <div id="content-tabs__committee__coupons__single__picto">
+                            <svg width="44" height="38" viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M43.4299 18.5001V35.8001C43.3899 35.9001 43.3399 36.0001 43.2999 36.1101C43.0499 36.8801 42.5599 37.4301 41.8299 37.7701C41.2499 38.0401 40.7299 38.0701 40.1399 37.6601C37.7699 36.0201 35.3599 34.4501 32.9599 32.8501C32.8499 32.7801 32.7299 32.7101 32.6099 32.6401C32.5499 33.0501 32.5099 33.4301 32.4299 33.8001C31.8099 36.3401 29.6899 38.0001 27.0799 38.0001C19.8899 38.0001 12.6899 38.0001 5.49991 38.0001C5.14991 38.0001 4.79991 37.9701 4.44991 37.9101C2.07991 37.5601 0.0399105 35.2701 0.0199105 32.8801C-0.0100895 29.0901 -8.9528e-05 25.3101 0.0199105 21.5201C0.0199105 20.4901 0.31991 19.5201 0.95991 18.7201C1.46991 18.0701 2.10991 17.5101 2.68991 16.9101C-0.76009 13.7101 -0.40009 9.33005 1.05991 6.85005C2.82991 3.82005 6.09991 2.25005 9.52991 2.83005C12.6599 3.36005 15.6099 5.79005 16.2499 9.80005C16.1199 4.10005 20.7099 0.410054 24.8299 0.0400544C28.6799 -0.299946 32.6799 1.64005 34.4799 5.68005C35.3599 7.65005 35.5399 9.71005 34.9999 11.8001C34.3599 14.3001 32.8799 16.2201 30.6799 17.6101C31.8799 18.7101 32.5199 20.0401 32.5799 21.6801C32.7399 21.5801 32.8499 21.5201 32.9499 21.4501C35.3299 19.8601 37.7399 18.3001 40.0899 16.6601C40.7499 16.2001 41.2999 16.2801 41.9299 16.5801C42.7399 16.9801 43.1499 17.6701 43.4099 18.4901L43.4299 18.5001ZM25.7899 2.72005C22.0499 2.72005 18.9999 5.77005 18.9999 9.50005C18.9999 13.2401 22.0499 16.2901 25.7899 16.2901C29.5299 16.2901 32.5799 13.2401 32.5799 9.51005C32.5799 5.77005 29.5299 2.72005 25.7999 2.72005H25.7899ZM13.5699 10.8601C13.5699 7.89005 11.0999 5.43005 8.13991 5.44005C5.16991 5.44005 2.70991 7.91005 2.71991 10.8701C2.71991 13.8401 5.18991 16.3001 8.14991 16.2901C11.1199 16.2901 13.5799 13.8201 13.5699 10.8601ZM14.2199 16.2601H19.0999C17.5399 14.6601 16.6299 12.8001 16.3099 10.6501C16.3199 12.7701 15.6099 14.6201 14.2199 16.2601Z" fill="white"/>
+                            </svg>                             
+                        </div>
+                        <div id="content-tabs__committee__coupons__single__text">
+                            <h3>Place cinéma</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                        <div id="content-tabs__committee__coupons__single__coupon" style="background-image: url('assets/img/coupons/coupon-pathe.png');"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
