@@ -2,14 +2,6 @@
 @import 'base';
 
 /*--------------------------------------------------------------
-Header
---------------------------------------------------------------*/
-
-header {
-    
-}
-
-/*--------------------------------------------------------------
 Page
 --------------------------------------------------------------*/
 
@@ -66,6 +58,7 @@ aside {
                         background-repeat: no-repeat;
                         background-position: 10px center;
                         background-size: 24px;
+                        font-size: 12px;
                     }
                     > div {
                         display: flex;
@@ -351,11 +344,22 @@ main {
                                             border-radius: 50%;
                                             position: absolute;
                                             background-color: var(--global-color);
-
                                         }
                                     }
                                     &:not(.active):hover::before {
                                         background: #f2f2f2;
+                                    }
+                                    &.event::after {
+                                        content: '11h00 : Réunion de fin';
+                                        width: 150px;
+                                        height: unset;
+                                        padding: 10px;
+                                        top: -350%;
+                                        left: 50%;
+                                        transform: translate(-50%, 0);
+                                        border-radius: var(--radius_small);
+                                        color: var(--white);
+                                        box-shadow: var(--shadow-2);
                                     }
                                     &.inactive {
                                         color: #aaa;
@@ -392,12 +396,13 @@ main {
                 }
             }
             &__list {
+                width: auto;
+                min-width: 33%;
                 .mail {
                     background-color: var(--white);
                     border-radius: var(--radius_small);
                     padding: 30px;
                     margin-bottom: 20px;
-                    margin-right: 50px;
                     border: 1px solid transparent;
                     cursor: pointer;
                     &.active {
@@ -435,6 +440,13 @@ main {
                 background-color: var(--white);
                 border-radius: var(--radius_small);
                 padding: 40px;
+                min-width: 65%;
+                width: auto;
+                margin-left: 30px;
+                display: none;
+                &.active {
+                    display: block;
+                }
                 &__top {
                     margin-bottom: 40px;
                     &__img {
@@ -508,11 +520,73 @@ main {
         }
         &__planning {
             &__image {
-                background-image: url(../assets/img/planning.png);
-                background-repeat: no-repeat;
-                background-position: center right;
-                background-size: cover;
-                height: 700px;
+                width: 100%;
+            }
+            &__bottom {
+                margin-top: 30px;
+                &__caption {
+                    span {
+                        display: block;
+                        border-bottom: 5px solid transparent;
+                        width: 150px;
+                        padding-bottom: 3px;
+                        &.work {
+                            border-color: var(--global-color);
+                        }
+                        &.rest {
+                            border-color: #002333;
+                        }
+                        &.holiday {
+                            border-color: #AAAAAA;
+                        }
+                    }
+                }
+                &__button {
+                    text-align: end;
+                    a {
+                        font-size: 15px;
+                    }
+                }
+            }
+            &__popup {
+                display: none;
+                background-color: var(--mask);
+                position: absolute;
+                inset: 0;
+                justify-content: center;
+                align-items: center;
+                &.active {
+                    display: flex;
+                }
+                h3 {
+                    margin: 0;
+                }
+                p {
+                    color: #AAAAAA;
+                    font-size: 14px;
+                }
+                &__inner {
+                    background-color: var(--white);
+                    border-radius: var(--radius_small);
+                    padding: 30px;
+                    &__dates {
+                        margin: 40px 0;
+                        input {
+                            border: none;
+                            outline: none;
+                            padding: 10px 20px;
+                            border-radius: var(--radius_small);
+                            background-color: var(--white-2);
+
+                        }
+                    }
+                    &__buttons {
+                        text-align: end;
+                        a.btn {
+                            margin-left: 20px;
+                        }
+                    }
+                }
             }
         }
         &__committee {
@@ -650,14 +724,4 @@ main {
             }
         }
     }
-}
-
-
-
-/*--------------------------------------------------------------
-Footer
---------------------------------------------------------------*/
-
-footer {
-    
 }

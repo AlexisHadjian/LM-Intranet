@@ -10,7 +10,7 @@
     <script defer src="assets/jQuery/jquery-3.6.1.min.js"></script>
     <script defer src="assets/slick/slick.min.js"></script>
     <script defer src="script.js"></script>
-    <title>Intranet</title>
+    <title>Intranet - BricoLab</title>
 </head>
 <body>
 
@@ -102,7 +102,7 @@
                 <div id="content-tabs__home__user-info" class="row">
                     <div id="content-tabs__home__user-info__left">
                         <h2>Bonjour Cindy</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Bienvenue sur votre espace intranet Bricolab</p>
                     </div>
                     <div id="content-tabs__home__user-info__right" class="row">
                         <div>
@@ -175,8 +175,20 @@
                 </div>
             </div>
             <div id="content-tabs__mailbox" class="tab">
-                <div id="content-tabs__mailbox__list" class="col2">
-                    <div class="mail active">
+                <div id="content-tabs__mailbox__list">
+                    <div class="mail">
+                        <div class="mail__top row">
+                            <div class="row">
+                                <div class="mail__top__img"></div>
+                                <h3 class="mail__top__name">John Doe</h3>
+                            </div>
+                            <span class="mail__top__date">11 : 45</span>
+                        </div>
+                        <div class="mail__bottom">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, culpa laudantium? Fugit temporibus magni quo at nulla sapiente, vero tenetur</p>
+                        </div>
+                    </div>
+                    <div class="mail">
                         <div class="mail__top row">
                             <div class="row">
                                 <div class="mail__top__img"></div>
@@ -213,7 +225,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="content-tabs__mailbox__content" class="col4">
+                <div id="content-tabs__mailbox__content">
                     <div id="content-tabs__mailbox__content__top" class="row">
                         <div class="row">
                             <div id="content-tabs__mailbox__content__top__img"></div>
@@ -252,7 +264,37 @@
                 </div>
             </div>
             <div id="content-tabs__planning" class="tab">
-                <div id="content-tabs__planning__image"></div>
+                <img id="content-tabs__planning__image" src="assets/img/planning.png" alt="planning"/>
+                <div id="content-tabs__planning__bottom" class="row">
+                    <div id="content-tabs__planning__bottom__caption" class="row col4">
+                        <span class="work">Jour de travail</span>
+                        <span class="rest">Repos</span>
+                        <span class="holiday">Congé</span>
+                    </div>
+                    <div id="content-tabs__planning__bottom__button" class="col2">
+                        <a href="#" class="btn btn_primary">Demander un congé</a>
+                    </div>
+                </div>
+                <div id="content-tabs__planning__popup">
+                    <div id="content-tabs__planning__popup__inner">
+                        <h3>Demande de congé :</h3>
+                        <p>Veuillez définir les dates de début et de fin des jours de congés souhaités</p>
+                        <div id="content-tabs__planning__popup__inner__dates" class="row">
+                            <div>
+                                <span>Du :</span>
+                                <input type="date"/>
+                            </div>
+                            <div>
+                                <span>Au :</span>
+                                <input type="date"/>
+                            </div>
+                        </div>
+                        <div id="content-tabs__planning__popup__inner__buttons">
+                            <a href="#" class="close">Annuler</a>
+                            <a href="#" class="btn btn_primary">Valider</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="content-tabs__committee" class="tab">
                 <div id="content-tabs__committee" class="row">
@@ -265,7 +307,7 @@
                                 <h3>Évènement entreprise</h3>
                                 <span>12h-14h du 26/01/23 au 29/01/23</span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti est sed rem hic nulla similique voluptatibus sunt sit dolore facere.</p>
+                            <p>Profitez d'une séance de yoga encadré par des professionnels afin de vous détendre</p>
                         </div>
                     </div>
                     <div id="content-tabs__committee__offer" class="col2">
@@ -290,7 +332,7 @@
                         </div>
                         <div id="content-tabs__committee__coupons__single__text">
                             <h3>Entrée Disney</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                            <p>Bénéficiez d'une réduction sur les entrées chez Disney</p>
                         </div>
                         <div id="content-tabs__committee__coupons__single__coupon" style="background-image: url('assets/img/coupons/coupon-disney.png');"></div>
                     </div>
@@ -313,7 +355,7 @@
                         </div>
                         <div id="content-tabs__committee__coupons__single__text">
                             <h3>Chèque cadhoc</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                            <p>Bénéficiez d'une réduction sur les chèques cadhoc</p>
                         </div>
                         <div id="content-tabs__committee__coupons__single__coupon" style="background-image: url('assets/img/coupons/coupon-cadhoc.png');"></div>
                     </div>
@@ -325,7 +367,7 @@
                         </div>
                         <div id="content-tabs__committee__coupons__single__text">
                             <h3>Place cinéma</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                            <p>Bénéficiez d'une réduction sur les places de cinémas</p>
                         </div>
                         <div id="content-tabs__committee__coupons__single__coupon" style="background-image: url('assets/img/coupons/coupon-pathe.png');"></div>
                     </div>

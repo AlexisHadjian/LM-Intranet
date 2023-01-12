@@ -4,6 +4,7 @@ jQuery(document).ready(function($){
     Tabs switch
     --------------------------------------------------------------*/
 
+    //Tabs system
     $('#tabs > li').click(function(e) {
 		e.preventDefault();
 
@@ -25,7 +26,7 @@ jQuery(document).ready(function($){
     $('#content-tabs__mailbox__list .mail').click(function(e) {
 		e.preventDefault();
 
-
+        $('#content-tabs__mailbox__content').addClass('active');
 		$('#content-tabs__mailbox__list .mail').removeClass('active');//Add current mail class
 		$(this).addClass('active');//Add current mail class
 	});
@@ -46,6 +47,29 @@ jQuery(document).ready(function($){
 		$('#content-tabs__mailbox__new-message').removeClass('active');
 	});
 
+    //Holiday button
+    $('#content-tabs__planning__bottom__button a').click(function(e) {
+        e.preventDefault();
+
+		$('#content-tabs__planning__popup').addClass('active');
+	});
+
+    //Cancel holiday
+    $('#content-tabs__planning__popup__inner__buttons a').click(function(e) {
+        e.preventDefault();
+
+		$('#content-tabs__planning__popup').removeClass('active');
+	});
+
+    //Calendar event info
+    $('.days li:nth-child(20), .days li:nth-child(25)').on({
+        mouseenter: function () {
+            $(this).addClass('event');
+        },
+        mouseleave: function () {
+            $(this).removeClass('event');
+        }
+    });
 	/*--------------------------------------------------------------
     Home blog slider
     --------------------------------------------------------------*/
