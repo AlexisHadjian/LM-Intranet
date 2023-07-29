@@ -488,7 +488,6 @@ main header {
   background-color: var(--white);
   width: 100%;
   padding: 20px;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
@@ -505,9 +504,6 @@ main header .tabs-header__left input {
   transition: 0.3s;
 }
 main header .tabs-header__left input::-moz-placeholder {
-  color: #9e9e9e;
-}
-main header .tabs-header__left input:-ms-input-placeholder {
   color: #9e9e9e;
 }
 main header .tabs-header__left input::placeholder {
@@ -691,7 +687,6 @@ main #content-tabs__home__actuality__calendar__top header .icons span {
   font-size: 1.9rem;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   border-radius: 50%;
   display: flex;
@@ -1065,7 +1060,6 @@ main #content-tabs__committee__coupons__single__picto {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 15px;
